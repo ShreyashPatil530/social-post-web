@@ -18,7 +18,11 @@ app.use('/api/auth', authRoutes);
 app.use('/api/posts', postRoutes);
 
 app.get('/', (req, res) => {
-    res.send('API is running...');
+    res.json({ 
+        status: "success",
+        message: "TaskPlanet Social App API - Backend is running successfully 🚀",
+        version: "1.0.0"
+    });
 });
 
 const PORT = process.env.PORT || 5000;
